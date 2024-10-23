@@ -1,0 +1,57 @@
+*{margin:0;padding:0;}
+
+/* header */
+header{
+    background-color: black;
+}
+.headerTop{
+    height: 48px;
+    background-color: #555;
+    border-bottom:1px solid #fff;
+    display:flex;
+    align-items: center; /* 중앙배치 */
+}
+.topMenu{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.headerBottom{
+    height: 72px;
+    background-color: #aaa;
+    display:flex;
+    align-items: center;
+}
+.innerContent{ /* 배경색을 넣기 위해서 너비가 설정된 컨텐츠 내용이 있는 영역을 추가로 만들어줌 */
+    width:1344px;
+    margin:0 auto;
+    background-color: antiquewhite;
+}
+
+/* main */
+.conA{
+    height:1217px;
+    background-color: aquamarine;
+}
+.conB{
+    height:492px;
+    background-color: lightcoral;
+}
+.conC{
+    height:1116px;
+    background-color: lightsalmon;
+}
+.conD{
+    height:594px;
+    background-color: lightseagreen;
+}
+.conE{
+    height:518px;
+    background-color: lightskyblue;
+}
+
+/* footer */
+footer{
+    height:704px;
+    background-color: lightgreen;
+}

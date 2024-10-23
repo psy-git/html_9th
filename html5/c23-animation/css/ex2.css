@@ -1,0 +1,43 @@
+ul{list-style:none;}
+*{margin:0;padding:0;}
+.station{
+    font-weight:bold;
+    overflow: hidden;
+    position: fixed;
+    left:0;
+    top:40%;
+    width:100%;
+    transform: rotate(30deg) scale(1.5);
+    z-index:-1;
+    opacity: 0.3;
+}
+.train{
+    width:200%;
+    display: flex;
+}
+.train>li{
+    width:50%;
+    white-space:nowrap;
+    overflow:hidden;
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+}
+.a{
+    font-size:calc(100vw / 18);
+    animation: moveA 20s linear -22s infinite;
+}
+.b{
+    font-size:calc(100vw / 18);
+    animation: moveB 20s linear -12s infinite;
+    color:blue;
+}
+@keyframes moveA{
+    0%{transform:translateX(100%)}
+    100%{transform: translateX(-100%);}
+}
+@keyframes moveB{
+    /* 자신이 위치해있는 지점에서 계산한다 */
+    0%{transform:translateX(0%)}
+    100%{transform: translateX(-200%);}
+}
+

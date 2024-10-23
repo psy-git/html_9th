@@ -1,0 +1,61 @@
+*{margin:0;padding:0;}
+.hero{
+    height:100vh;
+    position:relative;
+}
+.hero video{
+    width:100%;
+    height:100%;
+    object-fit: cover; /* 가로세로를 지정하고 사용 */
+}
+.floatingTxt{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.3);
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerTxt{
+    border:1px solid red;
+    width: 60%;
+    text-align: center;
+}
+.innerTxt h2{
+    display: flex;
+    justify-content: center;
+}
+.innerTxt h2 b:nth-of-type(1){animation: fadein 5s ease 0s forwards;} /* 마지막에 원상태로 돌아가서 사라지는 것을 막기 위해서 원래상태에서 멈추는 forwards를 적용한다 */
+.innerTxt h2 b:nth-of-type(2){animation: fadein 5s ease 0.1s forwards;}
+.innerTxt h2 b:nth-of-type(3){animation: fadein 5s ease 0.2s forwards;}
+.innerTxt h2 b:nth-of-type(4){animation: fadein 5s ease 0.3s forwards;}
+.innerTxt h2 b:nth-of-type(5){animation: fadein 5s ease 0.4s forwards;}
+.innerTxt h2 b:nth-of-type(6){animation: fadein 5s ease 0.5s forwards;}
+.innerTxt h2 b:nth-of-type(7){animation: fadein 5s ease 0.6s forwards;}
+.innerTxt h2 b:nth-of-type(8){animation: fadein 5s ease 0.7s forwards;}
+.innerTxt h2 b:nth-of-type(9){animation: fadein 5s ease 0.8s forwards;}
+.innerTxt h2 b{
+    opacity: 0;
+    font-size:5rem;
+    /* animation: fadein 5s ease 0s; */
+}
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        color:red;
+        transform:translateY(20px)scale(10);
+    }
+    21.888%{
+        color:red;
+        transform:translateY(20px)scale(1);
+    }
+    100%{
+        opacity: 1;
+        color:#fff;
+        transform:translateY(0px);
+    }
+}

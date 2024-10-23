@@ -1,0 +1,73 @@
+*{margin:0px;padding:0px;} /* *는 전체선택자, '모든'이라는 의미, 우선순위 점수 1점*/
+
+.box{
+    /* border-left-width:1px;
+    border-left-style:solid;
+    border-left-color:red; */
+    /* border-left:1px solid red; */
+
+    /* border-top-width:1px;
+    border-top-style:solid;
+    border-top-color:red; */
+    /* border-top:1px solid red; */
+
+    /* border-right-width:1px;
+    border-right-style:solid;
+    border-right-color:red; */
+    /* border-right:1px solid red; */
+
+    /* border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-bottom-color:red; */
+    /* border-bottom:1px solid red; */
+
+    border:1px solid red;
+    
+    /* margin-left:100px;
+    margin-right:100px;
+    margin-top:100px;
+    margin-bottom:100px; */
+    /* margin:100px; 사방에 똑같은 마진 100픽셀 */
+    /* margin:50px 100px; 상,하 50px 좌,우 100px   */
+    /* margin:20px 100px 50px; 상 20px 좌,우 100px 하 50px */
+    margin:10px 20px 30px 40px; /*상 10px 우 20px 하 30px 좌 40px 시계방향*/
+}
+.box2{
+    border:1px solid blue;
+    margin-top:10px; /* 태그가 인접한 경계의 마진은 둘 중 큰 값으로 적용되는 특징이 있다. (상하마진만, 좌우마진은 둘다 적용된다) */
+    /* padding-left:20px;
+    padding-top:20px;
+    padding-right:20px;
+    padding-bottom:20px; */
+    padding:20px; /* 축약형은 마진과 동일하다 */
+}
+.box2 p{
+    border:1px solid red;
+}
+/* html{
+    border:1px solid pink;
+}
+body{
+    border:1px solid green;
+} */
+.line1{
+    border:1px solid red;
+        /* 인라인레밸태그는 박스형태의 컨텐츠 박스가 아니고 라인 형태이기 때문에 위아래 padding/margin은 쓰지 않는다. 좌우 padding/margin만 사용한다 */
+    padding:10px; 
+    margin:10px;
+}
+
+#container{
+    border:10px solid darkmagenta;
+    width:300px; /* auto - 기본값, 컨텐츠의 너비 */
+    /* height:100px; 컨텐츠의 높이, 내용은 컨텐츠 밖으로 넘치게 된다. 높이는 자동으로 사용하는게 좋다. 태그는 경계선을 기준으로 배치가 되기 때문이다. */
+    padding:20px;
+    box-sizing:content-box; /* 기본값 */
+}
+
+.box3{
+    border:10px solid darkorange;
+    width:300px;
+    padding:20px;
+    box-sizing:border-box; /* 너비를 박스모델에 맞추어 설정되어 컨텐츠의 너비가 줄어들게 된다. */
+}

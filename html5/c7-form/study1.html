@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그 - 양식</title>
+</head>
+<body>
+    <h1>양식태그</h1>
+    <p>홈페이지를 사용하는 사용자가 내용을 입력할 수 있도록 양식을 제공할 때 사용하는 태그</p>
+    <p>label태그는 입력박스에 대한 이름표태그</p>
+    <p>label태그와 input태그와 같은 입력박스태그를 서로 연결하기 위해 input태그의 id속성과 label태그의 for속성 값을 똑같은 값으로 적용</p>
+    
+    <h2>input태그의 type속성에 적용되는 속성 값</h2>
+    <ul>
+        <li>text => 짧은 한 줄의 텍스트 입력</li>
+        <li>password => 비밀번호를 입력</li>
+        <li>radio => 필수적으로 선택해야할 항목(해제가 안됨)</li>
+        <li>checkbox => 자유롭게 선택할 항목(해제가 됨)</li>
+        <li>number => 숫자만 입력받는 용도로 사용(모바일환경 숫자패드가 올라옴)</li>
+    </ul>
+    <h2>사용되는 속성</h2>
+    <ul>
+        <li>value - 입력박스에 들어가는 실제정보/버튼형태에서는 버튼내용(자동로그인, 이전에 적었던 내용을 유지하기 위함)</li>
+        <li>disabled - 선택한 입력박스를 비활성</li>
+        <li>required - 선택한 입력박스 필수정보를 입력받도록(입력하지 않으면 전송시 안내문이 뜬다)</li>
+        <li>selected - option태그가 선택되도록</li>
+        <li>checked - radio/checkbox 버튼이 체크가 되도록</li>
+    </ul>
+    <hr>
+
+    <form action="#"><!-- action : 목적지 속성, 자료들을 어디에 제출할지에 대한 내용을 작성한다(개발자가 작성)-->
+        <div>
+            <label for="user_id">아이디</label>
+            <input type="text" id="user_id" value="abc123" disabled><!-- 속성과 값이 동일한 경우 값을 생략할 수 있다.-->
+        </div>
+        <div>
+            <label for="user_pw">비밀번호</label>
+            <input type="password" id="user_pw" value="12341234">
+        </div>
+        <!-- <input type="submit" value="로그인"> 기본값은 '제출'로 나온다. value속성을 통해서 기본값을 수정할 수 있다.-->
+        <button type="submit">로그인</button><!-- 자주 사용되는 형태 -->
+        <a href="./study2.html">회원가입</a>
+    </form>
+</body>
+</html>

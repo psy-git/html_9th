@@ -1,0 +1,29 @@
+h1:hover{
+    background-color:blue;
+    color:#fff;
+}
+h1:active{
+    letter-spacing:20px;
+    text-decoration:underline;
+    background-color:purple;
+}
+p{
+    border:1px solid green;
+    display:flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+p:before{
+    content:""; /* 내용이 없더라도 필수적으로 content라는 속성을 작성해야 가상태그가 만들어진다 */
+    border:1px solid red;
+    width:50px; /* 부모태그에 display:flex가 적용되면서 속성이 블록으로 바뀌어서 너비와 높이를 적용할 수 있다. flex를 지운경우에 display:inline-block을 적용해준다.*/
+    height:50px;
+    background: url("../img/quote1.png") no-repeat 50% 50% /contain;
+}
+p:after{
+    content:"";
+    border:1px solid blue;
+    width:50px;
+    height:50px;
+    background: url("../img/quote2.png") no-repeat 50% 50% /contain;
+}

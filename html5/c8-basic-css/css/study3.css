@@ -1,0 +1,66 @@
+p{
+    color:red;
+}
+/* 자식선택자, 자손선택자 */
+div>p{
+    /* div태그 안에 포함된 자식들 중에서 모든 p 태그들을 선택 */
+    color:green;
+}
+.box>p{
+    color:purple;
+}
+div p{
+    /* div태그 안에 포함된 자손들 중에서 모든 p태그들 선택 */
+    color:blue;
+}
+/* ul태그 안의 p태그를 선택하는 방법들 */
+li>p{
+    color:red;
+}
+.box li>p{
+    color:purple;
+}
+
+/* 형제선택자 */
+.list1~li{
+    /* list1클래스의 본인 제외 다음 형제 태그들 중에서 li태그들 선택(이전 형제 태그들은 선택 안됨) */
+    background-color:pink;
+}
+.list1+li{
+    /* list1클래스의 다음 형제 태그 li태그 1개만 선택 */
+    background-color:blue;
+}
+
+/* 순번선택자 */
+.box2>h3:nth-child(3){
+    /* box2클래스의 전체 자식태그 중 h3태그이면서 3번째 자식을 선택 */
+    color:red;
+}
+.box2>h3:nth-of-type(3){
+    /* box2클래스의 자식 h3태그타입 중에서 3번째 태그를 선택 */
+    color:green;
+}
+.list_box>li:nth-of-type(2n){
+    /* 짝수 전체 선택 */
+    font-size:3rem;
+}
+.list_box>li:nth-of-type(2n+1){
+    /* 홀수 전체 선택 2n+1,2n-1 */
+    text-decoration:underline;
+}
+.list_box>li:nth-of-type(3n+1){
+    color:red;
+}
+/* 속성선택자 */
+a[target="_blank"]{
+    background:black;
+    color:white;
+}
+a[href="http://www.naver.com"]{
+    color:#eee;
+    text-decoration:line-through; /* 취소선 스타일 */
+    pointer-events:none; /*클릭이 안 되게 함*/
+}
+p[data-sy="소연이설명"]{
+    font-style:italic;
+}

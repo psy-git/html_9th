@@ -1,0 +1,17 @@
+*{margin:0;padding:0;}
+.wrap1{
+    border:5px solid #000;
+    width:1200px;
+    margin:0 auto; /* 중앙배치 */
+}
+.wrap2{
+    border:5px solid black;
+    width:90%;
+    margin-top:50px;
+    margin:0 auto;
+}
+.wrap3{
+    border:5px solid black;
+    margin:0 20px;
+    margin-top:50px;
+}

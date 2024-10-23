@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단예제</title>
+</head>
+<body>
+    <!-- <ul>
+        <li>2x1=2<li>
+        <li>2x2=4<li>
+        <li>2x3=6<li>
+        <li>2x4=8<li>
+        <li>2x5=10<li>
+        <li>2x6=12<li>
+        <li>2x7=14<li>
+        <li>2x8=16<li>
+        <li>2x9=18<li>
+    </ul> -->
+    <!-- 이 소스코드를 반복문을 사용하여 만들어보시오 -->
+     <script>
+        // document.write('2x1=2') 힌트
+        let a = Number(prompt('숫자입력'))
+        if(a<2||a>9){
+            alert("단수는 2단부터 9단사이만 입력하시오")
+        }else{
+        document.write("<ul>")
+            for(let i=1;i<=9;i++){
+                document.write(`<li>${a}x${i}=${i*a}</li>`)
+            }
+        document.write("</ul>")
+    }
+     </script>
+</body>
+</html>

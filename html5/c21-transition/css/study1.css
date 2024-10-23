@@ -1,0 +1,39 @@
+:root{
+    /* 변수를 만드는 곳 - 변수가 적용된 곳을 일관적으로 변경할 수 있다, 이름은 원하는 것으로 작성하면 된다. */
+    --maincolor:green;
+}
+
+.box{
+    border:10px solid var(--maincolor);
+    width:400px; /* 변하기 전 스타일 */
+    height:400px;   /* 변하기 전 스타일 */
+    /* transition-property:all;
+    transition-duration:0.4s;
+    transition-timing-function:linear;
+    transition-delay:0s; */
+    transition:all 0.4s linear 0s; /* 축약형 */
+}
+.box:hover{
+    width:300px; /* 변한 후 스타일 */
+    height:300px; /* 변한 후 스타일 */
+    background-color: red;
+}
+
+.box2{
+    border:10px solid var(--maincolor);
+    width:400px; /* 변하기 전 스타일 */
+    height:400px;   /* 변하기 전 스타일 */
+    /* transition-property:width,height,background-color;
+    transition-duration:0.4s,0.4s,0.4s;
+    transition-timing-function:linear,ease,linear;
+    transition-delay:0s, 0.4s,0.8s; */
+    transition: /* 축약형 */
+    width 0.4s linear 0s,
+    height 0.4s ease 0s,
+    background-color 0.4s linear 0.8s;
+}
+.box2:hover{
+    width:300px;
+    height:300px;
+    background-color: blue;
+}

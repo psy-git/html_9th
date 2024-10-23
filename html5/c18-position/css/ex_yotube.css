@@ -1,0 +1,101 @@
+*{margin:0;padding:0;}
+ul{list-style: none;}
+
+/* header */
+header{
+    position:fixed; 
+    left:0;
+    top:0;
+    /* right:0; */
+    width:100%; /* height는 콘텐츠의 높이가 정해진 상태에서 %가 적용가능하지만(높이가 정해지지 않은 경우 컨텐츠의 높이를 정확하게 알수 없기 때문에) 너비는 브라우저의 너비가 정해져있기 때문에 너비를 지정하지 않아도 %가 적용 가능하다.*/
+    height:56px;
+    padding:0 16px;
+    box-sizing: border-box; /* 컨텐츠의 너비가 100%로 설정되어 왼쪽 패딩(16px)이 밀리는 만큼 컨텐츠의 크기(100%)와 오른쪽 패딩(16px)이 화면 밖으로 넘어간다 이를 수정하기 위한 방법 */
+    background-color:aqua;
+    /* 3개의 div를 배치하는 방법 */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header>div{
+    height:24px;
+    background-color: brown;
+}
+.logo{
+    width:170px;
+}
+.account{
+    width:225px;
+}
+.search{
+    width:730px;
+}
+
+/* aside */
+aside{
+    background-color: bisque;
+    width:240px;
+    height:calc(100vh - 56px);
+    /* header에 포지션을 적용하면서 공중에 뜨면서 aside영역이 위로 올라가서 이 영역을 내려주기 위해 포지션을 적용해준다 */
+    position:fixed;
+    top:56px;
+    left:0;
+    overflow:auto; /* 포지션 fixed에서 스크롤을 만들어 밑에 내용을 보기 위함 */
+}
+aside>div{
+    min-height:300px;
+    background-color: lightgreen;
+    border-bottom:1px solid black;
+    padding:12px;
+}
+aside>div>section{
+    min-height:150px;
+    background-color: lightseagreen;
+    border-bottom:1px solid black;
+    margin-bottom:12px;
+}
+aside>div>section:last-of-type{
+    border-bottom:none; /* 이후 컨텐츠를 추가할때 자동으로 스타일이 적용되게 하기 위한 설정 */
+    margin-bottom:0;
+}
+
+
+/* category */
+.category{
+    background-color: palevioletred;
+    width:calc(100vw - 240px); /* 포지션을 적용하면 콘텐츠만큼의 너비로 적용되므로 너비를 설정해준다 */
+    height:56px;
+    position:fixed;
+    top:56px;
+    left:240px;
+}
+
+/* main */
+main{
+    background-color: blueviolet;
+    min-height:200vh;
+    margin-left:240px;
+    margin-top:calc(56px*2);
+    padding:16px;
+}
+.normalVideo ul li{
+    background-color: lightcoral;
+    height: 340px;
+    width:calc((100% - 16px*(4 - 1))/4);
+    margin-right:16px;
+    margin-bottom:32px;
+}
+.normalVideo ul li:nth-of-type(4n){ /* 4번째마다 위치한 영역의 마진을 제외하기 위함 */
+    margin-right: 0;
+}
+.normalVideo ul{
+    display: flex;
+    flex-wrap:wrap;
+}
+.normalVideo ul li:nth-last-of-type(1),
+.normalVideo ul li:nth-last-of-type(2),
+.normalVideo ul li:nth-last-of-type(3),
+.normalVideo ul li:nth-last-of-type(4){
+    margin-bottom:0; /* 마지막 컨텐츠들의 마진을 제거하기 위함 */
+}
+

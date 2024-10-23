@@ -1,0 +1,10 @@
+.box{
+    border:1px solid black;
+    width:50%;
+    margin:0 auto;
+    max-width:800px; /* 800px 이상으로 안 늘어남 */
+    min-width: 320px;
+    min-height:300px;
+    max-height:400px;
+    overflow-y:auto;
+}

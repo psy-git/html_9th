@@ -1,0 +1,39 @@
+*{margin:0;padding:0;}
+
+.box1{
+    border:10px solid black;
+    width:50%;
+    /* 부모태그너비의 50%라는 뜻 */
+}
+.box2{
+    margin-top:50px;
+    border:10px solid black;
+    width:1000px; /* 고정값 */
+}
+.box2 section{
+    border:10px solid saddlebrown;
+    width:50%; /* 부모태그에 적용된 1000px의 50% = 500px */
+}
+.box3{
+    border:10px solid black;
+    margin-top:50px;
+    width:800px;
+}
+.box3 section{
+    border:10px solid darkgreen;
+    width:50vW;
+    /* vw단위는 viewport width */
+    height:30vh;
+    /* vh단위는 viewport height */
+}
+.box4{
+    margin-left:100px;
+    margin-top:50px;
+    border:10px solid black;
+}
+.box5{
+    border:10px solid #000;
+    margin-top:50px;
+    margin-left:100px;
+    width:100%;
+}

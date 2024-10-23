@@ -1,0 +1,62 @@
+/* 공통스타일 */
+.box{
+    border:5px solid black;
+    width:400px;
+    height:400px;
+    position:relative;
+    overflow: hidden; /* blur에서 밖으로 나온 부분을 숨겨주기 위함 */
+}
+.box img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.box figcaption{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%; /* 부모 너비의 100%가 absolute가 적용되면 relative(기준영역)의 너비의 100%가 된다. */
+    height:100%;
+    /* figcaption안의 자식 글자를 중앙에 배치하는 방법, 아이템으로 flex를 이용해서 중앙에 배치할 수 있다 */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    color:#fff;
+    font-size: 1.2rem;
+    opacity: 0;
+}
+.box:hover figcaption{ /* .box태그에 마우스를 올렸을때 figcaption의 투명도가 1이 된다.  */
+    opacity: 1;
+}
+.box_wrap{ /* 박스를 나란히 배치 */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 개별스타일 */
+.filter1 img{
+    filter: grayscale(0.6); /* 0~1 = 0~100% */
+}
+.filter2 img{
+    filter:brightness(0.2);
+}
+.filter3 img{
+    filter:blur(20px);
+}
+.filter4 img{
+    filter:hue-rotate(180deg); /* deg = degree, 음수 사용가능, 180deg 보색 */
+}
+
+.bg{
+    background-color: lightcoral; /* 혼합될 배경색이 필요하다 */
+}
+.mode1 img{
+    mix-blend-mode:color-burn;
+}
+.mode2 img{
+    mix-blend-mode:difference;
+}
+.mode3 img{
+    mix-blend-mode:overlay;
+}

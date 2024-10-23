@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표 - 예제</title>
+    <link rel="stylesheet" href="./css/ex1.css">
+</head>
+<body>
+    <!-- <p>사용자에게 이름과 국어,영어,수학,사회,과학, 다섯과목의 점수를 각각 물어보고, 입력한 점수를 합산점수, 평균을 계산하여 성적표 양식을 만들어주는 페이지를 제작해보자.</p> -->
+    <!-- <div class="score">
+        <h2>성적표</h2>
+        <p class="name">이름 : 박소연</p>
+        <table class="scoreTable">
+            <tr>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>사회</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td>20점</td>
+                <td>40점</td>
+                <td>100점</td>
+                <td>10점</td>
+                <td>50점</td>
+            </tr>
+            <tr>
+                <th colspan="5">합산점수</th>
+            </tr>
+            <tr>
+                <td colspan="5">220점</td>
+            </tr>
+            <tr>
+                <th colspan="5">평균</th>
+            </tr>
+            <tr>
+                <td colspan="5">44점</td>
+            </tr>
+        </table>
+        <p>박소연 학생의 평균점수는 44점으로 독려가 필요합니다.</p>
+    </div> -->
+    <script>
+        let name = prompt("이름을 입력해주세요")
+        let a = Number(prompt("국어 점수를 입력해주세요"))
+        let b = Number(prompt("영어 점수를 입력해주세요"))
+        let c = Number(prompt("수학 점수를 입력해주세요"))
+        let d = Number(prompt("사회 점수를 입력해주세요"))
+        let e = Number(prompt("과학 점수를 입력해주세요"))
+        let total = (a+b+c+d+e).toFixed(2) //소수 둘째 자리까지 계산
+        // let average = total/5
+        let n = 2 //소수 자리수 계산하는 함수입니다.
+        let average = Math.round((total/5)*(Math.pow(10,n)))/Math.pow(10,n) //소수점 2자리로 계산, 10제곱을 통해서 자리수에 따라서 제곱 숫자를 변경해주면 된다.
+
+        document.write(`<div class="score">
+        <h2>성적표</h2>
+        <p class="name">이름 : `+name+`</p>
+        <table class="scoreTable">
+            <tr>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>사회</th>
+                <th>과학</th>
+            </tr>
+            <tr>
+                <td>`+a+`점</td>
+                <td>`+b+`점</td>
+                <td>`+c+`점</td>
+                <td>`+d+`점</td>
+                <td>`+e+`점</td>
+            </tr>
+            <tr>
+                <th colspan="5">합산점수</th>
+            </tr>
+            <tr>
+                <td colspan="5">`+total+`점</td>
+            </tr>
+            <tr>
+                <th colspan="5">평균</th>
+            </tr>
+            <tr>
+                <td colspan="5">`+average+`점</td>
+            </tr>
+        </table>
+        <p>`+name+` 학생의 평균점수는 ${average}점으로 독려가 필요합니다.</p>
+    </div>`)
+    </script>
+    <!-- ``으로 묶일 때만 ${}를 사용할 수 있다 -->
+</body>
+</html>

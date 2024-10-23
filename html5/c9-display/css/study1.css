@@ -1,0 +1,20 @@
+.a{
+    background:pink;
+}
+.b{
+    background:salmon;
+}
+.b li{
+    background:seagreen;
+}
+.c{
+    background:lightseagreen;
+    width:400px;
+    height:400px;
+}
+.c+.a{display:inline} /*블록레벨태그를 인라인레벨태그로 만들어주는 속성*/
+.d{
+    width:400px;
+    height:400px;
+    background:purple;
+}

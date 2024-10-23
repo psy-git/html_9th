@@ -1,0 +1,76 @@
+*{margin:0;padding:0;}
+.pre{
+    white-space: pre;
+}
+.prewrap{
+    white-space:pre-wrap;
+}
+.desc{
+    padding-bottom:50px;
+    border-bottom:5px solid #000;
+    margin-bottom:50px;
+    font-size:1.4rem;
+}
+.box{
+    color:#ffffff;
+    background-color:blue;
+    padding:20px;
+    height:300px;
+    width:300px;
+    box-sizing:border-box;
+}
+.box2{
+    height:calc(100vh - 120px);
+    margin:100px 0;
+    background-color: bisque;
+    background-image: url(../img/coffee-7830087_640.jpg);
+
+    /* background-repeat: repeat; 기본값 */
+    /* background-repeat: repeat-x; 가로로 반복 */
+    /* background-repeat: repeat-y; 세로로 반복 */
+    background-repeat:no-repeat;
+
+    /* background-position: 100px 200px; x값 y값 */
+    /* background-position: 50% 50%; 화면 중앙에 이미지를 배치하는 방법 */
+    /* background-position: right top; top bottom center right left */
+    background-position:calc(100% - 60px) calc(100% - 70px); /* 부호 앞뒤로는 띄어쓰기를 할것 */
+}
+.box3{
+    color:white;
+    height:100vh;
+    background-color:aquamarine;
+    background-image:url("../img/coffee-7830087_640.jpg");
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+
+    background-size:300px auto; /* 이미지의 화면비율을 유지하는 방법, 기본값은 원본 이미지의 사이즈가 적용된다.*/
+    background-size:100% auto; /* 화면을 가득 채우는 방법 */
+    background-size:auto 100%;
+    background-size:cover; /* cover - 태그의 공간을 가득채우는 방식(배경이미지가 잘려서 안보일 수 도 있다) */
+    background-size:contain; /* contain - 이미지가 태그의 공간안에 잘리지 않는 선에서 최대크기로 들어가서 채우는 방식 */
+
+    background:aquamarine url("../img/coffee-7830087_640.jpg") no-repeat 0 0 /cover; /* background-size 앞에는 /를 통해서 구분을 해주어야한다, 축약형 color-image-repeat-position-size */
+    /*  background:red; 축약형을 사용하면 내용 전부가 수정된다 */
+}
+.box4{
+    border:1px solid white;
+    width:50vW; /* vw,vh는 어디에서나 사용할수 있는 단위이다 */
+    height:50vw;
+    margin:0 auto;
+    margin-bottom:50px;
+    background:aquamarine url(../img/coffee-7830087_640.jpg) no-repeat 50% 50% /cover;
+    /* background-attachment: scroll; 기본값 */
+    background-attachment:fixed;
+}
+.box4.blend{
+    background-blend-mode:multiply;
+}
+.blur{
+    width:80%;
+    height:80%;
+    margin:0 auto;
+    margin-top:10%;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px); /* 비표준 속성: 특정 브라우저에서는 나오지 않는 속성, -webkit-이라는 접두어를 사용하여 비표준css속성을 임시로 사용할 수 있다. */
+    backdrop-filter:blur(10px);
+}
